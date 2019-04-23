@@ -9,11 +9,12 @@ class ControllerTasks extends Controller {
 
     public function __construct() {
 	parent::__construct();
-	$this->model=new ModelTasks;
+	$this->model = new ModelTasks;
     }
 
     public function action_index() {
-	//TODO show all tasks
+	$this->view->tasks = $this->model->all();
+	$this->view->render('tasks_index_view');
     }
 
 }
