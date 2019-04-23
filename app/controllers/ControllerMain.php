@@ -10,4 +10,8 @@ class ControllerMain extends Controller {
 	echo 'Main controller action index';
     }
 
+    public function action_create() {
+	echo 'Main controller action create';
+    }
+
 }
