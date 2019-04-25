@@ -21,7 +21,9 @@ class ControllerTasks extends Controller {
         $this->view->render('tasks_create_view');
     }
     public function action_add(){
+	//TODO выбрать из поста, проверить и передать модели
         $this->model->add();
+	// TODO редирект
     }
 
 }

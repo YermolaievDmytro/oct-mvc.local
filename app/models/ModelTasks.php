@@ -37,13 +37,13 @@ class ModelTasks extends Model {
         $query = $this->db->escape_string("INSERT INTO tasks values(null, ".$task_name.");");
         if(strlen($task_name)<1 || strlen($task_name)>254){
             echo 'length of string is false';
-            return FALSE;
+            return FALSE; //TODO echo error
         }        
         
         $this->db->query($query);
         if ($this->db->error) {
             echo $this->db->error;
-            return FALSE;
+            return FALSE;//TODO echo error
         }
         header('Location: /tasks ');
     }
