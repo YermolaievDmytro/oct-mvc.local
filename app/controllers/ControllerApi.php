@@ -22,14 +22,20 @@ class ControllerApi extends Controller {
 	header("Content-type: application/json;");
 	echo $jsone_text;
     }
-    public function action_addquestion(){
+
+    public function action_addquestion() {
 	//TODO валидатор
 	$question = filter_input_array(INPUT_POST);
 	$this->model->add($question);
     }
-    public function action_deletequestion(){
-	$delId= $_POST['id'];
+
+    public function action_deletequestion() {
+	$delId = $_POST['id'];
 	$this->model->deletequestion($delId);
+    }
+
+    public function action_addphoto() {
+	var_dump($_FILES);
     }
 
 }
